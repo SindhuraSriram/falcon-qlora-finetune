@@ -87,10 +87,32 @@ Perfect for Colab and academic/research workflows!
 
 ---
 
+## 📊 Training Summary
+
+- **Model**: Falcon-RW-1B
+- **Dataset**: Dolly 15K (Instruction tuning)
+- **Fine-tuning method**: QLoRA (4-bit quantization + LoRA adapters)
+- **Platform**: Google Colab (T4 GPU)
+- **Epochs**: 3
+- **Training Time**: ~2.3 hours
+- **VRAM used**: ~11.5 GB
+- **Final model size**: ~1.6 GB (with LoRA)
+
+---
+
+## 💡 Observations
+
+- QLoRA made it possible to train Falcon 1B on a free Colab T4.
+- No OOM errors throughout training.
+- Dolly dataset worked out-of-the-box with LLaMA-Factory.
+
+---
+
 ## 💾 Output
 
 - Fine-tuned model saved at: `./falcon-dolly-qlora`
-- Can be pushed to HuggingFace Hub or used locally
+- Also available on HuggingFace Hub:  
+  👉 [SindhuraSriram/falcon-rw-1b-dolly-qlora](https://huggingface.co/SindhuraSriram/falcon-rw-1b-dolly-qlora)
 
 ---
 
